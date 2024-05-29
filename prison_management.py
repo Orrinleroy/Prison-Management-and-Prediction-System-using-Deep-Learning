@@ -3,6 +3,7 @@ from pymongo import MongoClient
 import bcrypt
 from tensorflow.keras.models import load_model
 import numpy as np
+from PIL import Image
 
 # Connect to MongoDB
 client = MongoClient('mongodb://localhost:27017/')
@@ -12,6 +13,12 @@ prisoners_collection = db['prisoners']
 
 # Load the deep learning model
 model = load_model('my_model.h5')
+
+# Function to display the logo in the sidebar
+def display_logo():
+    image = Image.open("Prison Pro Logo.png")  # Replace with your image path
+    logo = image.resize((100, 100))  # Resize the image to 100x100 pixels
+    st.sidebar.image(logo, use_column_width=False)
 
 # User registration
 def register_user():
@@ -106,7 +113,8 @@ def predict_sentence():
 
 # Main function
 def main():
-    st.title('Prison Management System')
+    st.sidebar.title('Prison Management System')
+    display_logo()
 
     if 'logged_in' not in st.session_state:
         st.session_state['logged_in'] = False
