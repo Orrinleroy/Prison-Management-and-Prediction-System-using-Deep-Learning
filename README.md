@@ -24,12 +24,7 @@ This project is a web application for managing a prison system, including user r
 ```
 3. Install the required packages
 ```
-  pip install streamlit
-  pip install "tensorflow<2.11"
-  pip install -U scikit-learn
-  pip install pymongo
-  pip install bcrypt
-  pip install numpy
+  pip install -r requirements.txt
 ```
 4. Ensure MongoDB is running 
 
@@ -46,3 +41,48 @@ This project is a web application for managing a prison system, including user r
 
 ## Usage
 ### User Authentication   
+**1. Register a new user**:
+   + Go to the Register page from the sidebar.
+   + Fill in the username and password.
+   + Click the Register button.
+
+**2. Login:**
+   + Go to the Login page from the sidebar.
+   + Fill in the username and password.
+   + Click the Login button.
+
+### Managing Prisoners
+**1. Add a prisoner**:
+   + After logging in, select "Add Prisoner" from the sidebar.
+   + Fill in the prisoner's details and click "Add Prisoner".
+
+**2. View and delete prisoners**:
+   + Select "View Prisoners" from the sidebar.
+   + The list of prisoners will be displayed.
+   + To delete a prisoner, click the "Delete" button next to the prisoner’s details.
+
+### Predicting Prison Sentence
+**1. Predict Sentence**
+   + Select "Predict Sentence" from the sidebar.
+   + Select the values for crime type, severity, and criminal history from the dropdowns.
+   + The predicted years in prison will be displayed.
+
+## Project Structure
+```
+prison-management-system/
+│
+├── prison_management.py    # Main application file
+├── requirements.txt        # Python dependencies
+├── my_model.h5             # Deep learning model file
+└── README.md               # This README file
+```
+
+##Dependencies
+  + streamlit
+  + pymongo
+  + bcrypt
+  + tensorflow
+  + numpy
+
+## Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
