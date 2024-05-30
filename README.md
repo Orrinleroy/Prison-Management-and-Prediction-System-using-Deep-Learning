@@ -77,7 +77,7 @@ prison-management-system/
 └── README.md               # This README file
 ```
 
-##Dependencies
+## Dependencies
   + streamlit
   + pymongo
   + bcrypt
