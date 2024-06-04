@@ -8,6 +8,8 @@ data = pd.read_csv('prison_data.csv')
 # Encode categorical variables
 label_encoder = LabelEncoder()
 data['crime_type'] = label_encoder.fit_transform(data['crime_type'])
+data['severity'] = label_encoder.fit_transform(data['severity'])
+data['criminal_history'] = label_encoder.fit_transform(data['criminal_history'])
 
 # Split the data into features and target
 X = data[['crime_type', 'severity', 'criminal_history']]
