@@ -8,14 +8,14 @@ This project is a web application for managing a prison system, including user r
 
 ## Installation
 ### Prerequisites
--> Python 3.6 or higher </br>
--> MongoDB </br>
+-> Python 3.6 or higher<br>
+-> MongoDB 
 
 ### Step-by-Step Installation
-1. Clone the repository :- </br>
+1. Clone the repository :- <br>
 ```
-  git clone https://github.com/your-username/prison-management-system.git </br>
-  cd prison-management-system </br>
+  git clone https://github.com/your-username/prison-management-system.git
+  cd prison-management-system 
 ```  
 2. Craete a Virtual Environment
 ```
